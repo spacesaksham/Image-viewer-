@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Image Viewer</title>
+  <style>
+    /* Optional CSS for styling */
+    body {
+      font-family: Arial, sans-serif;
+      text-align: center;
+      background-color: #f0f0f0; /* Bright background color */
+    }
+    h1 {
+      color: #333; /* Dark text color for better contrast */
+    }
+    #image-container {
+      margin-top: 20px;
+    }
+    img {
+      max-width: 100%;
+      height: auto;
+    }
+    button {
+      background-color: #007bff; /* Bright blue button color */
+      color: #fff; /* White text color for button */
+      border: none;
+      padding: 10px 20px;
+      font-size: 16px;
+      cursor: pointer;
+      border-radius: 5px;
+    }
+  </style>
+</head>
+<body>
+  <h1>Basic Image Viewer</h1>
+  <button onclick="showImage()">Show Image</button>
+  <div id="image-container" style="display: none;">
+    <img id="image" src="image.jpg" alt="Image">
+  </div>
+
+  <script>
+    function showImage() {
+      var imageContainer = document.getElementById("image-container");
+      var image = document.getElementById("image");
+      // Replace 'image_path' with the path to your image
+      image.src = "image.jpg";
+      imageContainer.style.display = "block";
+    }
+  </script>
+</body>
+</html>
